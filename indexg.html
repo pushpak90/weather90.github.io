@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,16 @@
     <title>Matplotlib using Pyscript</title>
 
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
     <py-env>
 
         - matplotlib
 
     </py-env>
-      
+
     <style>
-        body{
+        body {
             display: flex;
             /* justify-content: center; */
             align-items: center;
@@ -26,54 +27,45 @@
             font-family: sans-serif;
             font-size: 120%;
             flex-direction: column;
-
         }
-        a{
+        
+        a {
             text-decoration: none;
             color: white;
         }
-        .footer{
+        
+        .footer {
             position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
             background-color: red;
+            padding: 15px;
             color: white;
             text-align: center;
         }
     </style>
 
 </head>
+
 <body>
     <strong>Matplotlib Output : </strong>
     <div id="plot"></div>
 
     <py-script output="plot">
-        import matplotlib
-        import matplotlib.pyplot as plt
-        import numpy as np
-        #Data for plotting
-        Freq = [500,1000,1500,2000,2500,3000,3500,4000,4500,5000]
-        Ampli = [1700,2400,1500,1000,500,700,1200,200,300,1500]
-
-
-        fig, ax = plt.subplots()
-        ax.plot(Freq,Ampli)
-
-        ax.set(xlabel = 'Freq (Hz)', ylabel = 'Ampli (mV)',
-                title = 'Earthquake')
-        ax.grid()
-        fig
+        import matplotlib import matplotlib.pyplot as plt import numpy as np #Data for plotting Freq = [500,1000,1500,2000,2500,3000,3500,4000,4500,5000] Ampli = [1700,2400,1500,1000,500,700,1200,200,300,1500] fig, ax = plt.subplots() ax.plot(Freq,Ampli) ax.set(xlabel
+        = 'Freq (Hz)', ylabel = 'Ampli (mV)', title = 'Earthquake') ax.grid() fig
     </py-script>
-      
-    <div >
-    <p >
-        Chances of Earthquake predicted for <br> upcoming month is 0%.
-    </p>
+
+    <div>
+        <p>
+            Chances of Earthquake predicted for <br> upcoming month is 0%.
+        </p>
     </div>
     <div class="footer">
-        <p><a href="./s.html"> Back </a></p>
+        <p><a href="./option.html"> Back </a></p>
     </div>
-    
+
 </body>
+
 </html>
