@@ -58,15 +58,16 @@
         import matplotlib
         import matplotlib.pyplot as plt
         import numpy as np
-                #Data for plotting
-        t = np.arange(0.0,2.0,0.01)
-        s = 1 + np.sin(2 * np.pi * t)
-            
+        #Data for plotting
+        Freq = [500,1000,1500,2000,2500,3000,3500,4000,4500,5000]
+        Ampli = [1700,2400,1500,1000,500,700,1200,200,300,1500]
+
+
         fig, ax = plt.subplots()
-        ax.plot(t,s)
-            
-        ax.set(xlabel = 'Frequency', ylabel = 'Amplitude',
-        title = 'About as simple as it gets, folks')
+        ax.plot(Freq,Ampli)
+
+        ax.set(xlabel = 'Freq (Hz)', ylabel = 'Ampli (mV)',
+                title = 'Earthquake')
         ax.grid()
         fig
     </py-script>
